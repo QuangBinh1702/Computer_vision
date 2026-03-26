@@ -1,4 +1,8 @@
 __pycache__/
 *.pyc
 
-venv/
+.venv/
+
+flower_data/
+
+docs
