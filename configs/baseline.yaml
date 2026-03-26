@@ -1,0 +1,19 @@
+seed: 42
+data_dir: flower_data/flower_data
+image_size: 224
+batch_size: 32
+num_workers: 0
+model_name: efficientnet_b0
+pretrained: true
+epochs: 12
+optimizer:
+  name: adamw
+  lr: 0.0003
+  weight_decay: 0.0001
+scheduler:
+  name: cosine
+  t_max: 12
+criterion:
+  name: cross_entropy
+checkpoint_path: checkpoints/baseline_best.pth
+

@@ -1,0 +1,30 @@
+{
+  "summary": [
+    {
+      "split": "train",
+      "num_images": 6552,
+      "num_classes": 102
+    },
+    {
+      "split": "valid",
+      "num_images": 800,
+      "num_classes": 100
+    },
+    {
+      "split": "test",
+      "num_images": 819,
+      "num_classes": 102
+    }
+  ],
+  "class_balance": {
+    "min": 27,
+    "max": 206,
+    "mean": 64.23529411764706,
+    "std": 35.39988713708815
+  },
+  "leakage": {
+    "train_valid": 1,
+    "train_test": 0,
+    "valid_test": 0
+  }
+}

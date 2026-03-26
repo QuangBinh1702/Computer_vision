@@ -1,0 +1,46 @@
+{
+  "comparison_table": [
+    {
+      "Model": "VGG16 (nhóm trước)",
+      "Type": "Kế thừa",
+      "Test Top-1 (%)": 75.0,
+      "Test Top-5 (%)": 91.0
+    },
+    {
+      "Model": "ResNet50 (nhóm trước)",
+      "Type": "Kế thừa",
+      "Test Top-1 (%)": 90.0,
+      "Test Top-5 (%)": 97.0
+    },
+    {
+      "Model": "convnext_tiny (nhóm mình)",
+      "Type": "Cải tiến",
+      "Test Top-1 (%)": 99.51,
+      "Test Top-5 (%)": 100.0
+    },
+    {
+      "Model": "efficientnet_b3 (nhóm mình)",
+      "Type": "Cải tiến",
+      "Test Top-1 (%)": 98.78,
+      "Test Top-5 (%)": 100.0
+    }
+  ],
+  "techniques_used": [
+    "2-Stage Fine-tuning (freeze → unfreeze)",
+    "RandAugment (num_ops=2, magnitude=9)",
+    "Mixup (alpha=0.2) + CutMix (alpha=1.0)",
+    "Label Smoothing (epsilon=0.1)",
+    "Cosine LR with Linear Warmup (3 epochs)",
+    "AMP (Mixed Precision)",
+    "Gradient Clipping (max_norm=1.0)",
+    "Random Erasing (p=0.1)"
+  ],
+  "inherited_models": {
+    "VGG16": "Nhóm trước — kiến trúc 2014, 138M params",
+    "ResNet50": "Nhóm trước — kiến trúc 2015, 25.6M params"
+  },
+  "improved_models": {
+    "ConvNeXt-Tiny": "Người 1 — kiến trúc 2022, 28.6M params, modern CNN",
+    "EfficientNet-B3": "Người 2 — kiến trúc 2019, 12M params, compound scaling"
+  }
+}

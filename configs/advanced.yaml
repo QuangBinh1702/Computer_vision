@@ -1,0 +1,37 @@
+seed: 42
+data_dir: flower_data/flower_data
+image_size: 224
+batch_size: 32
+num_workers: 0
+
+# Models to compare: inherited (vgg16, resnet50) + improved (efficientnet_b3, convnext_tiny, swin_t)
+models:
+  - convnext_tiny   # Người 1: modern CNN (2022)
+  - efficientnet_b3 # Người 2: efficient CNN (2019)
+
+stage1:
+  freeze_backbone: true
+  epochs: 5
+  lr: 0.0005
+
+stage2:
+  unfreeze_all: true
+  epochs: 20
+  lr: 0.0001
+  warmup_epochs: 3
+  min_lr: 0.000001
+  grad_clip_max_norm: 1.0
+  use_amp: true
+
+regularization:
+  label_smoothing: 0.1
+  mixup_alpha: 0.2
+  cutmix_alpha: 1.0
+
+augmentation:
+  randaugment: true
+  randaugment_num_ops: 2
+  randaugment_magnitude: 9
+  random_erasing: 0.1
+
+checkpoint_dir: checkpoints/advanced
