@@ -18,23 +18,17 @@ from src.flowers102.models import create_model
 
 # ── Paths ────────────────────────────────────────────────────────────────
 ROOT = Path(__file__).resolve().parent
-DATA_DIR = ROOT / "flower_data" / "flower_data"
 REPORTS = ROOT / "reports"
 CHECKPOINTS = ROOT / "checkpoints"
 
 # ── Class-name mapping ──────────────────────────────────────────────────
-# cat_to_name.json maps folder id (str) → flower name
-# ImageFolder sorts folder names lexicographically: "1","10","100",…
-# We build idx→name using the same order.
 CAT_TO_NAME: dict[str, str] = json.loads(
-    (DATA_DIR / "cat_to_name.json").read_text(encoding="utf-8")
+    (ROOT / "cat_to_name.json").read_text(encoding="utf-8")
 )
-FOLDER_NAMES_SORTED = sorted(
-    [p.name for p in (DATA_DIR / "train").iterdir() if p.is_dir()],
-    key=str,                       # lexicographic — same as ImageFolder
-)
+# ImageFolder sorts folder names lexicographically: "1","10","100",…
+FOLDER_NAMES_SORTED = sorted(CAT_TO_NAME.keys(), key=str)
 IDX_TO_NAME = {
-    idx: CAT_TO_NAME.get(folder, folder)
+    idx: CAT_TO_NAME[folder]
     for idx, folder in enumerate(FOLDER_NAMES_SORTED)
 }
 
@@ -147,27 +141,10 @@ with tab_predict:
         uploaded = st.file_uploader(
             "Tải ảnh hoa lên", type=["jpg", "jpeg", "png", "webp"]
         )
-        # Sample images from test set
-        use_sample = st.checkbox("Hoặc dùng ảnh mẫu từ test set")
-        sample_img = None
-        if use_sample:
-            test_dir = DATA_DIR / "test"
-            sample_classes = sorted(test_dir.iterdir())[:10]
-            sample_options = {}
-            for cls_dir in sample_classes:
-                imgs = list(cls_dir.glob("*.jpg")) + list(cls_dir.glob("*.png"))
-                if imgs:
-                    name = CAT_TO_NAME.get(cls_dir.name, cls_dir.name)
-                    sample_options[f"{name} ({cls_dir.name})"] = imgs[0]
-            choice = st.selectbox("Chọn ảnh mẫu", list(sample_options.keys()))
-            sample_img = sample_options[choice]
 
-    # Determine which image to use
     image = None
     if uploaded is not None:
         image = Image.open(uploaded)
-    elif use_sample and sample_img is not None:
-        image = Image.open(sample_img)
 
     with col_result:
         if image is not None:
@@ -196,7 +173,7 @@ with tab_predict:
                 "Accuracy trên tập test vẫn đạt **99.51%** (ConvNeXt) / **98.78%** (EfficientNet-B3)."
             )
         else:
-            st.info("👈 Upload ảnh hoặc chọn ảnh mẫu để bắt đầu.")
+            st.info("👈 Upload ảnh hoa để bắt đầu dự đoán.")
 
 # ── Tab: Compare ────────────────────────────────────────────────────────
 with tab_compare:
@@ -210,20 +187,7 @@ with tab_compare:
     cmp_uploaded = st.file_uploader(
         "Tải ảnh hoa lên", type=["jpg", "jpeg", "png", "webp"], key="cmp_upload"
     )
-    cmp_use_sample = st.checkbox("Hoặc dùng ảnh mẫu", key="cmp_sample")
     cmp_image = None
-
-    if cmp_use_sample:
-        test_dir = DATA_DIR / "test"
-        cmp_classes = sorted(test_dir.iterdir())[:15]
-        cmp_options = {}
-        for cls_dir in cmp_classes:
-            imgs = list(cls_dir.glob("*.jpg")) + list(cls_dir.glob("*.png"))
-            if imgs:
-                name = CAT_TO_NAME.get(cls_dir.name, cls_dir.name)
-                cmp_options[f"{name} ({cls_dir.name})"] = imgs[0]
-        cmp_choice = st.selectbox("Chọn ảnh mẫu", list(cmp_options.keys()), key="cmp_sel")
-        cmp_image = Image.open(cmp_options[cmp_choice])
     if cmp_uploaded is not None:
         cmp_image = Image.open(cmp_uploaded)
 

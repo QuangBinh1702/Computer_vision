@@ -3,6 +3,26 @@ __pycache__/
 
 .venv/
 
+# Data (download separately, too large for git)
 flower_data/
+flower_data.zip
+*.mat
 
-docs
+# Checkpoints không cần cho demo
+checkpoints/search_trial_*.pth
+checkpoints/advanced/*_stage1.pth
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Docs (generated)
+docs/
