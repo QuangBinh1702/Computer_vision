@@ -1,0 +1,26 @@
+{
+  "convnext_tiny": {
+    "display_name": "ConvNeXt-Tiny",
+    "accuracy": 0.9951159951159951,
+    "top5_accuracy": 1.0,
+    "macro_f1": 0.9953189002293127,
+    "weighted_f1": 0.9951536821952804,
+    "ece": 0.11759471874206495
+  },
+  "efficientnet_b3": {
+    "display_name": "EfficientNet-B3",
+    "accuracy": 0.9877899877899878,
+    "top5_accuracy": 1.0,
+    "macro_f1": 0.9853260010562949,
+    "weighted_f1": 0.9876874273411305,
+    "ece": 0.25103365552585494
+  },
+  "efficientnet_b0": {
+    "display_name": "Baseline (B0)",
+    "accuracy": 0.989010989010989,
+    "top5_accuracy": 1.0,
+    "macro_f1": 0.9887009748824717,
+    "weighted_f1": 0.9888643998836324,
+    "ece": 0.012562753443898443
+  }
+}

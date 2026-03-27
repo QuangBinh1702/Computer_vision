@@ -1,0 +1,103 @@
+class_idx,class_name,precision,recall,f1-score,support
+0,pink primrose,1.0,1.0,1.0,5
+1,globe thistle,1.0,1.0,1.0,3
+2,blanket flower,1.0,1.0,1.0,8
+3,trumpet creeper,1.0,1.0,1.0,4
+4,blackberry lily,1.0,1.0,1.0,6
+5,snapdragon,1.0,1.0,1.0,9
+6,colt's foot,1.0,1.0,1.0,9
+7,king protea,1.0,1.0,1.0,6
+8,spear thistle,0.75,1.0,0.8571428571428571,3
+9,yellow iris,1.0,1.0,1.0,4
+10,globe-flower,1.0,1.0,1.0,3
+11,purple coneflower,1.0,1.0,1.0,9
+12,peruvian lily,1.0,1.0,1.0,6
+13,balloon flower,1.0,1.0,1.0,7
+14,hard-leaved pocket orchid,1.0,1.0,1.0,5
+15,giant white arum lily,1.0,1.0,1.0,3
+16,fire lily,0.6666666666666666,1.0,0.8,2
+17,pincushion flower,1.0,1.0,1.0,4
+18,fritillary,1.0,1.0,1.0,7
+19,red ginger,1.0,1.0,1.0,2
+20,grape hyacinth,1.0,1.0,1.0,5
+21,corn poppy,1.0,0.8,0.8888888888888888,5
+22,prince of wales feathers,1.0,1.0,1.0,3
+23,stemless gentian,1.0,1.0,1.0,6
+24,artichoke,1.0,0.8888888888888888,0.9411764705882353,9
+25,canterbury bells,1.0,1.0,1.0,2
+26,sweet william,1.0,1.0,1.0,14
+27,carnation,1.0,1.0,1.0,2
+28,garden phlox,1.0,1.0,1.0,6
+29,love in the mist,1.0,1.0,1.0,8
+30,mexican aster,1.0,1.0,1.0,5
+31,alpine sea holly,1.0,1.0,1.0,6
+32,ruby-lipped cattleya,1.0,1.0,1.0,7
+33,cape flower,1.0,1.0,1.0,8
+34,great masterwort,1.0,1.0,1.0,8
+35,siam tulip,1.0,1.0,1.0,5
+36,sweet pea,1.0,0.8333333333333334,0.9090909090909091,6
+37,lenten rose,1.0,0.75,0.8571428571428571,8
+38,barbeton daisy,1.0,1.0,1.0,14
+39,daffodil,1.0,1.0,1.0,4
+40,sword lily,1.0,1.0,1.0,16
+41,poinsettia,1.0,1.0,1.0,11
+42,bolero deep blue,1.0,1.0,1.0,3
+43,wallflower,1.0,1.0,1.0,21
+44,marigold,1.0,1.0,1.0,3
+45,buttercup,1.0,1.0,1.0,5
+46,oxeye daisy,1.0,1.0,1.0,3
+47,english marigold,1.0,1.0,1.0,4
+48,common dandelion,1.0,1.0,1.0,8
+49,petunia,1.0,0.9583333333333334,0.9787234042553191,24
+50,wild pansy,1.0,1.0,1.0,8
+51,primula,1.0,1.0,1.0,14
+52,sunflower,1.0,1.0,1.0,4
+53,pelargonium,1.0,1.0,1.0,7
+54,bishop of llandaff,1.0,1.0,1.0,8
+55,gaura,1.0,1.0,1.0,11
+56,geranium,0.9333333333333333,1.0,0.9655172413793104,14
+57,orange dahlia,1.0,1.0,1.0,7
+58,tiger lily,1.0,1.0,1.0,9
+59,pink-yellow dahlia,1.0,1.0,1.0,10
+60,cautleya spicata,1.0,1.0,1.0,8
+61,japanese anemone,1.0,1.0,1.0,4
+62,black-eyed susan,1.0,1.0,1.0,4
+63,silverbush,1.0,1.0,1.0,5
+64,californian poppy,1.0,1.0,1.0,7
+65,osteospermum,1.0,1.0,1.0,4
+66,spring crocus,1.0,1.0,1.0,4
+67,bearded iris,1.0,1.0,1.0,3
+68,windflower,0.75,1.0,0.8571428571428571,3
+69,moon orchid,1.0,1.0,1.0,6
+70,tree poppy,1.0,1.0,1.0,4
+71,gazania,1.0,1.0,1.0,9
+72,azalea,1.0,1.0,1.0,11
+73,water lily,1.0,1.0,1.0,28
+74,rose,1.0,1.0,1.0,14
+75,thorn apple,1.0,1.0,1.0,13
+76,morning glory,1.0,1.0,1.0,4
+77,passion flower,1.0,1.0,1.0,25
+78,lotus,1.0,1.0,1.0,14
+79,toad lily,1.0,1.0,1.0,3
+80,bird of paradise,1.0,1.0,1.0,10
+81,anthurium,1.0,1.0,1.0,11
+82,frangipani,1.0,1.0,1.0,13
+83,clematis,0.9444444444444444,1.0,0.9714285714285714,17
+84,hibiscus,0.875,1.0,0.9333333333333333,14
+85,columbine,1.0,0.9,0.9473684210526315,10
+86,desert-rose,1.0,1.0,1.0,10
+87,tree mallow,1.0,1.0,1.0,5
+88,magnolia,1.0,1.0,1.0,6
+89,cyclamen,0.9285714285714286,1.0,0.9629629629629629,13
+90,watercress,1.0,1.0,1.0,15
+91,monkshood,1.0,1.0,1.0,2
+92,canna lily,1.0,1.0,1.0,14
+93,hippeastrum,1.0,1.0,1.0,8
+94,bee balm,1.0,1.0,1.0,11
+95,ball moss,1.0,1.0,1.0,6
+96,foxglove,1.0,1.0,1.0,16
+97,bougainvillea,1.0,1.0,1.0,14
+98,camellia,1.0,0.6666666666666666,0.8,9
+99,mallow,0.7142857142857143,1.0,0.8333333333333334,5
+100,mexican petunia,1.0,1.0,1.0,4
+101,bromelia,1.0,1.0,1.0,7

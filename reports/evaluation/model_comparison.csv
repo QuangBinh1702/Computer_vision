@@ -1,0 +1,4 @@
+Model,Accuracy (%),Top-5 (%),Macro F1,Weighted F1,Macro Precision,Macro Recall,ECE ↓
+ConvNeXt-Tiny,99.51,100.0,0.9953,0.9952,0.9957,0.9959,0.1176
+EfficientNet-B3,98.78,100.0,0.9853,0.9877,0.9859,0.9882,0.251
+Baseline (B0),98.9,100.0,0.9887,0.9889,0.99,0.9894,0.0126
